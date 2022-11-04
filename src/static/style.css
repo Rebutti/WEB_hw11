@@ -1,0 +1,103 @@
+body,
+html {
+  padding: 5rem 50px 50px;
+  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  align-content: center;
+}
+
+a {
+  color: #00B7FF;
+}
+a:hover, a:focus {
+    color: #ffffff;
+    
+  }
+
+h1 {
+  color: #0d7fdd;
+}
+h2 {
+    color: #1186e6;
+  }
+
+.template {
+  /* padding: 3rem 1.5rem; */
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+.button{
+    box-sizing: border-box;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  border: 2px solid #0d7fdd;
+  border-radius: 0.6em;
+  color: #d7dce0;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+.button:hover, .button:focus {
+    color: #fff;
+    outline: 0;
+    box-shadow: 0 0 40px 40px #AFCDE7 inset;
+  }
+
+.button {
+-webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+
+.form-control{
+    margin-top: 5px
+}
+
+
+  table {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 14px;
+    border-collapse: collapse;
+    text-align: center;
+    }
+    th, td:first-child {
+    background: #AFCDE7;
+    color: white;
+    padding: 10px 20px;
+    }
+    th, td {
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: white;
+    }
+    td {
+    background: #D8E6F3;
+    }
+
+nav{
+    background-color: #0053a7;
+}

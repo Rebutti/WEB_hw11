@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="contacts_page" style="color: #000;">
+<h1>Your contacts</h1>
+{% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-warning">{{message}}</div>
+            {% endfor %}
+        {% endif %}
+{% endwith %}
+
+</div>
+<div>
+    <table style="width:100%">
+        <tr>
+            <td>first name</td>
+            <td>last name</td>
+            <td>birthday</td>
+            <td>email</td>
+            <td>cell phone</td>
+            <td>address</td>
+            <td></td>
+            <td></td>
+          </tr>
+    {% for contact in contacts%}
+    <tr>
+        <th>{{contact.first_name}}</th>
+        <th>{{contact.second_name}}</th>
+        <th>{{contact.birthday}}</th>
+        <th>{{contact.email}}</th>
+        <th>{{contact.cell_phone}}</th>
+        <th>{{contact.address}}</th>
+        <th>
+            <form action="/edit_contact/{{contact.id}}" method="post">
+                <button class="btn btn-sm btn-outline-secondary">
+                    Edit contact
+                </button>
+            </form>
+        </th>
+        <th>
+            <form action="/delete_contact/{{contact.id}}" method="post">
+                <button class="btn btn-sm btn-outline-secondary">
+                Delete
+                </button>
+            </form>
+        </th>
+      </tr>
+    {% endfor %}
+</table>
+</div>
+<div>
+    <button class="button" href="/add_contact"><a class="nav-link" href="/add_contact">add contact</a></button>
+</div>
+{% endblock %}

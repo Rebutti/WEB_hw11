@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if auth %}
+<div class="container">
+<h1>Hello {{username}}!</h1>
+<h2>Choose what do you want to do:</h2>
+
+<button class="button" href="/add_contact">
+    <a class="nav-link" href="/contacts">Watch my contacts</a>
+</button>
+<button class="button" href="/add_contact">
+    <a class="nav-link" href="/pictures">Watch my pictures</a>
+</button>
+
+
+</div>
+{% else %}
+<h1>Hello! I`m your {{title}}!</h1>
+<button class="button" href="/add_contact">
+    <a class="nav-link" href="/registration">Please sign up</a>
+</button>
+{% endif %}
+
+{% endblock %}
